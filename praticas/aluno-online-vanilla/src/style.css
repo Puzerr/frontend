@@ -1,5 +1,5 @@
 * {
-    box-sizing: 0;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -27,7 +27,6 @@ main {
     display: flex;
     flex: 1;
     flex-direction: column;
-    align-items: left;
     margin: 1.5rem;
 }
 
@@ -68,11 +67,12 @@ article > h3 {
     margin-bottom: 0.5rem;
 }
 
-@media (min-width: 768px){
+@media (width >= 768px){
     main > section {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
+
     aside {
         display: block;
         padding: 1.5rem;
