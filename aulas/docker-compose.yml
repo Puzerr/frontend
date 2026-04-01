@@ -2,6 +2,7 @@ services:
   app:
     image: node:24
     working_dir: /app
+    user: 1000:1000
     volumes:
       - ./:/app
     ports:
