@@ -15,8 +15,8 @@
 
 body {
     display: flex;
-    background-color: var(--cor-fundo);
     height: 100vh;
+    background-color: var(--cor-fundo);
 }
 
 aside {
@@ -47,14 +47,14 @@ main > h2 {
 
 main > section {
     display: grid;
-    gap: 20px 0;
     grid-template-columns: 1fr;
+    gap: 20px 0;
 }
 
 section > article {
+    padding-bottom: 0.5rem;
     border: solid 1px gray;
     border-radius: 0.5rem;
-    padding-bottom: 0.5rem;
 }
 
 article > * {
@@ -62,9 +62,67 @@ article > * {
 }
 
 article > h3 {
-    background-color: gray;
-    border-radius: 0.5rem 0.5rem 0 0;
     margin-bottom: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: gray;
+}
+
+#body-login {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-login {
+    padding-top: 15vh;
+    min-width: max-content;
+}
+
+#header-login {
+    display: grid;
+    width: fit-content;
+    margin: 0 auto 20px;
+}
+
+#header-login > img {
+    height: 8rem;
+    width: 8rem;
+    margin: 0 auto;
+}
+
+#header-login > h1 {
+    text-align: center;
+}
+
+form {
+    align-self: center;
+}
+
+form > input {
+    display: block;
+    height: 32px;
+    width: 250px;
+    margin-bottom: 1rem;
+    padding: 0 5px;
+    border: 1px solid #a8a8a8;
+    border-radius: 0.5rem;
+}
+
+#erro-email, #erro-senha {
+    margin-bottom: 20px;
+} 
+
+#botao-enviar-login {
+    width: 100%;
+    padding: 0.8rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #a8a8a8;
+}
+
+#footer-login {
+    margin-bottom: 1vh;
+    min-width: max-content;
+    text-align: center;
 }
 
 @media (width >= 768px){
