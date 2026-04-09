@@ -1,0 +1,16 @@
+function AsideNav() {
+  return (
+    <nav>
+      <ul className="pl-6" id="ul-sidebar">
+        <li>Dashboard</li>
+        <li>Notas</li>
+        <li>Faltas</li>
+        <li>Boletos</li>
+        <li>Requerimentos</li>
+        <li>Sair</li>
+      </ul>
+    </nav>
+  );
+}
+
+export default AsideNav;
