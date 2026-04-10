@@ -1,16 +1,13 @@
-import Sidebar from "../components/Sidebar.jsx";
-import Topbar from "../components/Topbar.jsx";
+import Tabela from "../components/Tabela.jsx";
+import Layout from "./Layout.jsx";
 
 function Faltas() {
   return (
-    <>
-      <Sidebar />
-      <main>
-        <Topbar />
-        <h2>Minhas faltas</h2>
-        <section></section>
-      </main>
-    </>
+    <Layout tituo="Minhas Faltas" subtitulo="Histórico de Faltas por Semestre">
+      <Tabela />
+      <Tabela />
+      <Tabela />
+    </Layout>
   );
 }
 

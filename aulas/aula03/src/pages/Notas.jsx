@@ -1,16 +1,11 @@
-import Sidebar from "../components/Sidebar.jsx";
-import Topbar from "../components/Topbar.jsx";
+import Layout from "./Layout.jsx";
+import Tabela from "../components/Tabela.jsx"
 
 function Notas() {
   return (
-    <>
-      <Sidebar />
-      <main>
-        <Topbar />
-        <h2>Minhas notas</h2>
-        <section></section>
-      </main>
-    </>
+    <Layout titulo="Minhas Notas" subtitulo="Histórico de Notas por Semestre">
+      <Tabela />
+    </Layout>
   );
 }
 

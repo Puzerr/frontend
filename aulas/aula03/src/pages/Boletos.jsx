@@ -1,16 +1,21 @@
-import Sidebar from "../components/Sidebar.jsx";
-import Topbar from "../components/Topbar.jsx";
+import Layout from "./Layout.jsx";
+import Tabela from "../components/Tabela.jsx";
 
 function Boletos() {
+  const colunas = ["Vencimento", "Valor", "Situação"];
+
+  const boletos = [
+    { vencimento: "01/04/2026", valor: 500, situacao: "Pago" },
+    { vencimento: "01/05/2026", valor: 500, situacao: "A vencer" },
+    { vencimento: "01/06/2026", valor: 500, situacao: "A vencer" },
+    { vencimento: "01/07/2026", valor: 500, situacao: "A vencer" },
+    { vencimento: "01/08/2026", valor: 500, situacao: "A vencer" },
+  ];
+
   return (
-    <>
-      <Sidebar />
-      <main>
-        <Topbar />
-        <h2>Meus boletos</h2>
-        <section></section>
-      </main>
-    </>
+    <Layout titulo="Meus boletos" subtitulo="Histórico de Pagamentos">
+      <Tabela titulos={colunas} dados={boletos} />
+    </Layout>
   );
 }
 

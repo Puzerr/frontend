@@ -1,11 +1,11 @@
-function Card() {
+function Card(props) {
   return (
     <article>
-      <h3>Mural de avisos</h3>
+      <h3>{props.titulo}</h3>
       <ul>
-        <li>Eleição de representantes</li>
-        <li></li>
-        <li></li>
+        {props.items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
       </ul>
     </article>
   );
