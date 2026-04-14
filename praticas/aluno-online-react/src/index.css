@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  --cor-texto: #303030;
+}
+
+@layer base {
+  h1 {
+    font-size: var(--text-4xl);
+    color: var(--cor-texto);
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    color: var(--cor-texto);
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+    color: var(--cor-texto);
+  }
+
+  p {
+    font-size: var(--text-lg);
+    color: var(--cor-texto);
+  }
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+}
+
+ul#ul-sidebar > li {
+  list-style: disc;
+  padding-bottom: 2.5rem;
+  font-weight: 700;
+  font-size: var(--text-xl);
+}
