@@ -1,13 +1,10 @@
-function AsideNav() {
+function AsideNav({items}) {
   return (
     <nav>
-      <ul className="pl-6" id="ul-sidebar">
-        <li>Dashboard</li>
-        <li>Notas</li>
-        <li>Faltas</li>
-        <li>Boletos</li>
-        <li>Requerimentos</li>
-        <li>Sair</li>
+      <ul className="pl-6 h" id="ul-sidebar">
+        {items.map((elemento, index) => (
+          <li key={index}>{elemento}</li>
+        ))}
       </ul>
     </nav>
   );
