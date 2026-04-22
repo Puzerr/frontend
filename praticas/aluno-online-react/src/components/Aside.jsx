@@ -3,9 +3,18 @@ import AsideNav from "./AsideNav.jsx";
 
 function Aside() {
   return (
-    <aside className="w-sm h-full hidden lg:block bg-gray-300 p-4">
-      <AsideHeader />
-      <AsideNav />
+    <aside className="overflow-auto w-sm hidden lg:block bg-gray-300 p-4">
+      <AsideHeader titulo="Aluno Online" />
+      <AsideNav
+        items={[
+          "Dashboard",
+          "Notas",
+          "Faltas",
+          "Boletos",
+          "Requerimentos",
+          "Sair",
+        ]}
+      />
     </aside>
   );
 }
