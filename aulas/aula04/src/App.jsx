@@ -3,14 +3,23 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Settings from "./pages/Settings.jsx";
 import Erro404 from "./pages/Erro404.jsx";
+import Layout from "./layouts/Layout.jsx";
+import Login from "./pages/Login.jsx";
+import Perfil from "./pages/Perfil.jsx";
 
-function App(){
-  return <Routes>
-    <Route index element={<Home />}/>
-    <Route path="/about" element={<About />}/>
-    <Route path="/settings" element={<Settings />}/>
-    <Route path="*" element={<Erro404 />}/>
-  </Routes>
-};
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="perfil/:id" element={<Perfil />} />
+        <Route path="about" element={<About />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="*" element={<Erro404 />} />
+    </Routes>
+  );
+}
 
 export default App;
