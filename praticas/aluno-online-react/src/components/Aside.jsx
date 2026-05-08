@@ -3,7 +3,7 @@ import AsideNav from "./AsideNav.jsx";
 
 function Aside() {
   return (
-    <aside className="overflow-auto w-sm hidden lg:block bg-gray-300 p-4">
+    <aside className="overflow-auto w-sm hidden lg:block bg-gray-300 p-4 bg-gray-300">
       <AsideHeader titulo="Aluno Online" />
       <AsideNav
         items={[
