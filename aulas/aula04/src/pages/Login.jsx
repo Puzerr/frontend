@@ -1,16 +1,19 @@
-import { AuthContext } from "../contexts/AuthContext.jsx";
-import { useContext } from "react";
+import { useNavigate } from "react-router";
+import { useAuthContext } from "../contexts/AuthContext.jsx";
 
 function Login() {
-  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const { login } = useAuthContext();
 
   const handleEntrar = () => {
-    login({usuario:"raphael.ferraz@iesb.edu.br", senha:"12345678"});
+    login({ usuario: "raphael.ferraz@iesb.edu.br", senha: "12345678" });
+    navigate("/");
   };
   return (
     <>
       <h1>Login</h1>
-      <button onClick={handleEntrar}>En/trar</button>
+      <button onClick={handleEntrar}>Entrar</button>
     </>
   );
 }

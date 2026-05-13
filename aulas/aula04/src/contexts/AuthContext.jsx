@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import { useContext } from "react";
 import { useState } from "react";
 
 const AuthContext = createContext();
@@ -8,7 +9,7 @@ function AuthProvider({ children }) {
   const [usuario, setUsuario] = useState({});
 
   const login = (dados) => {
-    setUsuario({ id: 0, nome: "Raphael", email: "raphael@iesb.edu.br"});
+    setUsuario({ id: 0, nome: "Raphael", email: "raphael@iesb.edu.br" });
     setLogado(true);
   };
 
@@ -24,4 +25,8 @@ function AuthProvider({ children }) {
   );
 }
 
-export { AuthContext, AuthProvider };
+function useAuthContext() {
+  return useContext(AuthContext);
+}
+
+export { useAuthContext, AuthContext ,AuthProvider };
