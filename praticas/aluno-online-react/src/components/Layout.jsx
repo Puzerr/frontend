@@ -1,23 +1,12 @@
-import Login from "../pages/Login.jsx";
-import Dashboard from "../pages/Dashboard.jsx";
-import Notas from "../pages/Notas.jsx";
-import Faltas from "../pages/Faltas.jsx";
-import Boletos from "../pages/Boletos.jsx";
-import Requerimentos from "../pages/Requerimentos.jsx";
+import { Outlet } from "react-router";
 import Aside from "./Aside.jsx";
 
-function Layout({ pagina }) {
-  const identificador = pagina;
+function Layout() {
   return (
     <>
-      {identificador != 0 && <Aside />}
+      <Aside />
       <main className="flex flex-1 flex-col h-screen m-6">
-        {identificador == 0 && <Login />}
-        {identificador == 1 && <Dashboard />}
-        {identificador == 2 && <Notas />}
-        {identificador == 3 && <Faltas />}
-        {identificador == 4 && <Boletos />}
-        {identificador == 5 && <Requerimentos />}
+        <Outlet />
       </main>
     </>
   );
