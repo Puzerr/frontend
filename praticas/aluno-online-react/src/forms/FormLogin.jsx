@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router";
 import InputEmail from "../components/InputEmail.jsx";
 import InputSenha from "../components/InputSenha.jsx";
 import BotaoSubmit from "../components/BotaoSubmit.jsx";
@@ -37,7 +38,9 @@ function FormLogin({ titulo, imagem }) {
       <h1 className="text-center mb-4 font-bold">{titulo}</h1>
       <InputEmail valor={email} erro={emailErro} mudaValor={mudaEmail} />
       <InputSenha valor={senha} erro={senhaErro} mudaValor={mudaSenha} />
-      <BotaoSubmit>Entrar</BotaoSubmit>
+      <NavLink to="/">
+        <BotaoSubmit>Entrar</BotaoSubmit>
+      </NavLink>
     </form>
   );
 }
