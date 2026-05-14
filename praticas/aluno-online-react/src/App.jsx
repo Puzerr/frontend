@@ -10,7 +10,6 @@ import Requerimentos from "./pages/Requerimentos.jsx";
 function App() {
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
         <Route path="notas" element={<Notas />} />
@@ -18,6 +17,7 @@ function App() {
         <Route path="boletos" element={<Boletos />} />
         <Route path="requerimentos" element={<Requerimentos />} />
       </Route>
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }

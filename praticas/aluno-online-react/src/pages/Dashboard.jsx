@@ -1,7 +1,10 @@
 import Header from "../components/Header.jsx";
 import Section from "../components/Section.jsx";
+import useAuth from "../hooks/useAuth.jsx";
 
 function Dashboard() {
+  const {usuario} = useAuth()
+
   const data = {
     card1: {
       titulo: "Mural de avisos",
@@ -32,7 +35,7 @@ function Dashboard() {
 
   return (
     <>
-      <Header titulo="Olá, Aluno!" subtitulo="Bem-vindo ao portal do aluno" />
+      <Header titulo={`Olá, ${usuario.name ? usuario.name : 'Aluno'}!`} subtitulo="Bem-vindo ao portal do aluno" />
       <Section tipo="card" items={Object.values(data)} />
     </>
   );
