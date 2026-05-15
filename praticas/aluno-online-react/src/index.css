@@ -5,6 +5,12 @@
   --cor-texto: #303030;
 }
 
+@theme{
+  --color-primary: #dda15e;
+  --color-secondary: #ddcc5e;
+  --color-tertiary: #606c38;
+}
+
 @layer base {
   h1 {
     font-size: var(--text-4xl);
@@ -30,11 +36,4 @@
 #root {
   display: flex;
   min-height: 100vh;
-}
-
-ul#ul-sidebar > li {
-  list-style: disc;
-  padding-bottom: 2.5rem;
-  font-weight: 700;
-  font-size: var(--text-xl);
 }

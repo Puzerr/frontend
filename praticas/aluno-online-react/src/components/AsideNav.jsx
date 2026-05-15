@@ -10,13 +10,13 @@ function AsideNav({ items }) {
 
   return (
     <nav>
-      <ul className="pl-6 h" id="ul-sidebar">
+      <ul className="pl-6 list-none" id="ul-sidebar">
         {items.map((elemento, index) => (
-          <li key={index}>
+          <li key={index} className="pb-10 font-bold text-xl">
             {elemento === "Sair" ? (
               <NavLink onClick={handleSair}>{elemento}</NavLink>
             ) : (
-              <NavLink to={elemento.toLowerCase()}>{elemento}</NavLink>
+              <NavLink to={elemento.toLowerCase() == "dashboard" ? "/" : elemento.toLowerCase()}>{elemento}</NavLink>
             )}
           </li>
         ))}
