@@ -1,7 +1,7 @@
 function Card({ titulo, conteudo }) {
   return (
-    <article className="mb-6 pb-lg rounded-t-lg rounded-b-lg border border-gray-300">
-      <h3 className="bg-gray-300 font-semibold py-2 px-4 rounded-t-lg">
+    <article className="mb-6 pb-lg rounded-t-lg rounded-b-lg border border-primary">
+      <h3 className="bg-primary font-semibold py-2 px-4 rounded-t-lg">
         {titulo}
       </h3>
       {conteudo.map((elemento, index) => (
