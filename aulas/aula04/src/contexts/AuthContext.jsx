@@ -5,7 +5,7 @@ import { useState } from "react";
 const AuthContext = createContext();
 
 function AuthProvider({ children }) {
-  const [logado, setLogado] = useState(false);
+  const [logado, setLogado] = useState(true);
   const [usuario, setUsuario] = useState({});
 
   const login = (dados) => {
