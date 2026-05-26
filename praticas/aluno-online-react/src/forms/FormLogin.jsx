@@ -30,7 +30,7 @@ function FormLogin({ titulo, imagem }) {
   return (
     <form
       onSubmit={trataSubmit}
-      className="flex flex-col m-auto px-3 py-8 w-md border-2 border-gray-300 rounded-md"
+      className="flex flex-col m-auto px-3 py-8 w-md border-2 border-tertiary rounded-md"
     >
       {imagem && (
         <img src={logo} alt="Imagem da logo" className="w-32 m-auto" />

@@ -1,15 +1,22 @@
 import { NavLink } from "react-router";
+import useAuth from "../hooks/useAuth";
 
 function AsideNav({ items }) {
+  const { logout } = useAuth();
+
+  const handleSair = () => {
+    logout();
+  };
+
   return (
     <nav>
-      <ul className="pl-6 h" id="ul-sidebar">
+      <ul className="pl-6 list-none" id="ul-sidebar">
         {items.map((elemento, index) => (
-          <li key={index} >
+          <li key={index} className="pb-10 font-bold text-xl">
             {elemento === "Sair" ? (
-              <NavLink to="/login">{elemento}</NavLink>
+              <NavLink onClick={handleSair}>{elemento}</NavLink>
             ) : (
-              <NavLink to={elemento.toLowerCase()}>{elemento}</NavLink>
+              <NavLink to={elemento.toLowerCase() == "dashboard" ? "/" : elemento.toLowerCase()}>{elemento}</NavLink>
             )}
           </li>
         ))}

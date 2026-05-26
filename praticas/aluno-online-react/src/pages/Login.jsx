@@ -3,10 +3,10 @@ import FormLogin from "../forms/FormLogin.jsx";
 
 function Login() {
   return (
-    <>
-      <FormLogin titulo="Aluno Online" imagem={true}/>
+    <main className="flex flex-col h-screen m-auto">
+      <FormLogin titulo="Aluno Online" imagem={true} />
       <RodapeCopyright />
-    </>
+    </main>
   );
 }
 
