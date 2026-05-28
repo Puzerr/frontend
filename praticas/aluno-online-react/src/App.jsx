@@ -6,6 +6,7 @@ import Faltas from "./pages/Faltas.jsx";
 import Boletos from "./pages/Boletos.jsx";
 import Notas from "./pages/Notas.jsx";
 import Requerimentos from "./pages/Requerimentos.jsx";
+import RequerimentoForm from "./forms/RequerimentoForm.jsx";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
         <Route path="faltas" element={<Faltas />} />
         <Route path="boletos" element={<Boletos />} />
         <Route path="requerimentos" element={<Requerimentos />} />
+        <Route
+          path="requerimentos/novo-requerimento"
+          element={<RequerimentoForm />}
+        />
       </Route>
       <Route path="/login" element={<Login />} />
     </Routes>
