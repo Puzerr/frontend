@@ -1,0 +1,14 @@
+{
+  "produto": [
+    {
+      "id": "czD8nLXNG-8",
+      "nome": "banana o retorno que deu certo",
+      "preco": "1",
+      "unidade": "kg"
+    }
+  ],
+  "clientes": [],
+  "fonercedores": [],
+  "pedidos": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
