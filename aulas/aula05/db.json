@@ -1,14 +1,10 @@
 {
-  "produto": [
-    {
-      "id": "czD8nLXNG-8",
-      "nome": "banana o retorno que deu certo",
-      "preco": "1",
-      "unidade": "kg"
-    }
-  ],
+  "produto": [],
   "clientes": [],
   "fonercedores": [],
   "pedidos": [],
+  "usuarios": [
+    { "email": "jeffykisses@amz.com", "senha": "voltei", "id": "67" }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
